@@ -1,0 +1,14 @@
+metayolo=1
+metain_type=2
+data=voc
+neg = 1
+rand = 0
+novel = data/voc_novels.txt
+novelid = 0
+# scale = 0
+meta = data/voc_traindict_full.txt
+train = /home/xing/workbook/DATASET/VOCData/voc_train.txt
+valid = /home/xing/workbook/DATASET/VOCData/2007_test.txt
+backup = backup/metayolo
+gpus=0,1
+num_workers=8

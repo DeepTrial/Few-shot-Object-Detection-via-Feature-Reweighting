@@ -1,0 +1,7 @@
+torch >=1.2
+torchvision >= 0.2.2
+future
+easydict
+numpy
+opencv-python == 3.4.2
+tqdm
