@@ -154,15 +154,15 @@ def train(epoch):
     )
 
 
+    metaset = dataset.MetaDataset(metafiles=metadict, train=True)
     metaloader = torch.utils.data.DataLoader(
-        dataset=dataset.MetaDataset(
-                    metafiles=metadict,
-                    train=True),
-        batch_size=len(cfg.classes) * cfg.num_gpus,
-        shuffle=False,  #attention to keep false
+        metaset,
+        batch_size=metaset.batch_size,
+        shuffle=False,
         num_workers=num_workers,
         pin_memory=True
     )
+    
     metaloader = iter(metaloader)
 
     lr = adjust_learning_rate(optimizer, processed_batches)
