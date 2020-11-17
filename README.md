@@ -1,4 +1,4 @@
-# Few-shot Object Detection via Feature Reweighting (Remake Version for Python3.6+ Pytorch1.2+)
+# Few-shot Object Detection via Feature Reweighting (Remake Version)
 
 This repo is the remake version for the original code of https://github.com/bingykang/Fewshot_Detection .
 
