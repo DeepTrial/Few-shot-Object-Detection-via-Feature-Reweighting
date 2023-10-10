@@ -92,7 +92,7 @@ nsamples          = len(trainlist)
 init_width        = model.width
 init_height       = model.height
 init_epoch        = 0 if cfg.tuning else model.seen/nsamples
-max_epochs        = int(max_batches*batch_size/nsamples+1)
+max_epochs        = int((max_batches*batch_size/nsamples+1)/10)
 max_epochs        = int(math.ceil(cfg.max_epoch*1./cfg.repeat)) if cfg.tuning else max_epochs 
 
 if use_cuda:
